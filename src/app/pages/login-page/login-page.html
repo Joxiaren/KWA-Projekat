@@ -1,0 +1,17 @@
+<img src="assets/icons/anonProfile.svg" loading="lazy">
+
+<form [formGroup]="form" (submit)="login()">
+    <div class="form-title">Login</div>
+    <div class="form-control">
+        <label [class]="hasInput('username')" for="username"> Username </label>
+        <input [class]="hasError('username')" type="text" formControlName="username" name="username" required/>
+    </div>
+    <div class="form-control-error">{{getError("username")}}</div>
+    <div class="form-control">
+        <label [class]="hasInput('password')" for="password"> Password </label>
+        <input [class]="hasError('password')" type="password" formControlName="password" name="password" required/>
+    </div>
+    <div class="form-control-error">{{getError("password")}}</div>
+    
+    <button>Login</button>
+</form> 
