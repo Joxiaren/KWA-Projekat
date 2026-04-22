@@ -4,14 +4,14 @@
     <div class="form-title">Login</div>
     <div class="form-control">
         <label [class]="hasInput('username')" for="username"> Username </label>
-        <input [class]="hasError('username')" type="text" formControlName="username" name="username" required/>
+        <input [class]="hasError('username')" type="text" formControlName="username" name="username" tabindex="1" required/>
     </div>
-    <div class="form-control-error">{{getError("username")}}</div>
+    <div [class]="['form-control-error', hasError('username')]">{{getError("username")}}</div>
     <div class="form-control">
         <label [class]="hasInput('password')" for="password"> Password </label>
-        <input [class]="hasError('password')" type="password" formControlName="password" name="password" required/>
+        <input [class]="hasError('password')" type="password" formControlName="password" name="password" tabindex="2" required/>
     </div>
-    <div class="form-control-error">{{getError("password")}}</div>
+    <div [class]="['form-control-error', hasError('password')]">{{getError("password")}}</div>
     
-    <button>Login</button>
+    <button tabindex="3">Login</button>
 </form> 

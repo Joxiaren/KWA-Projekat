@@ -13,7 +13,7 @@ export class LoginPage {
     password: new FormControl("", Validators.minLength(8))
   });
 
-  suppressError : WritableSignal<boolean> = signal(true);
+  suppressError = signal<boolean>(true);
 
   login(){
     
@@ -38,7 +38,6 @@ export class LoginPage {
     if(!this.form.get(formControlName)?.valid ){
       return "I have an error :<";
     }
-
     return ""
   }
 }
