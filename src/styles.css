@@ -1,3 +1,8 @@
+:root{
+    --background-color: #ffddb7;
+    --header-color: #924c09;
+}
+
 *{
     font-family: "Roboto", sans-serif;
 }
@@ -10,5 +15,5 @@ html,body{
 }
 
 body{
-    background-color: #ffddb7;
-}/* You can add global styles to this file, and also import other style files */
+    background-color: var(--background-color);
+}

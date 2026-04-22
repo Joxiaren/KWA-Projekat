@@ -1,0 +1,107 @@
+:host{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+img{
+    width: 200px;
+    height: 200px;    
+    filter: invert(23%) sepia(78%) saturate(1854%) hue-rotate(21deg) brightness(100%) contrast(93%);
+    margin-bottom: 64px;
+}
+
+form{
+    background-color: var(--header-color);
+    width: 240px;
+    border-radius: 10px;
+    padding: 56px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px 0px 0px 0px;
+    width: 100% ;
+}
+
+label{
+    color: gray;
+    position: absolute;
+    left: 50%;
+    user-select: none;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: all 0.15s ease-out;
+
+}
+
+label:has(+ input:focus),.inputed{
+    transform: translateY(-180%) translateX(-50%);
+    color: white;
+}
+
+input{
+    width: 100%;
+    height: 2rem;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 3px solid rgba(0,0,0,0)
+    /* background-color: var(--background-color); */
+}
+
+input.erred{
+    border: 3px solid rgb(210, 0, 0);
+}
+
+.form-control-error{
+    width: 100%;
+    font-size: 14px;
+    padding-left: 8px;
+    margin:2px 0px 12px 0px;
+    border-radius: 4px;
+    height: 1rem;
+    color: white;
+    border: 1px solid rgba(0,0,0,0)
+}
+
+.form-control-error.erred{
+    border: 1px solid rgb(175, 114, 0);
+    background-color: rgb(210, 0, 0);
+}
+
+button{
+    width: 100%;
+    margin: 12px 0px;
+    padding: 8px;
+
+    border-radius: 8px;
+    font-size: 16px;
+
+    background: #ffffff;
+    background: linear-gradient(232deg,rgba(255, 255, 255, 1) 0%, rgba(217, 224, 16, 1) 27%, rgba(255, 123, 0, 1) 100%);
+    background-size: 400% 400%;
+
+    transition: background-position 0.15s ease-out, border-color 0.15s ease-out;
+}
+
+button:hover{
+    cursor: pointer;
+    border-color: yellow;
+    background-position: 50% 50%;
+}
